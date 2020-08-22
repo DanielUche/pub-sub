@@ -22,6 +22,8 @@ app.post("/event", (req, res) => {
 
 app.post("/subscribe/:topic", async (req, res) => {
   try {
+    // Based on the assumption that data passed to curl request will be in the form below
+    // curl -X POST -d '{ "url": "http://localhost:8000/event"}' http://localhost:8000/subscribe/topic1
     const { url } = JSON.parse(Object.keys(req.body)[0]);
     const { topic: t } = req.params;
 

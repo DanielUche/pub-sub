@@ -1,0 +1,17 @@
+version: '3'
+
+services:
+  server:
+    container_name: server
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+    links:
+      - redis-server
+  
+  redis-server:
+    image: "redis"

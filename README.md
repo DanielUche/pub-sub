@@ -9,7 +9,7 @@ You need to have docker installed
 ``cd project_dir
   ./start-server.sh
  ``
- The above steps builds and start the container.
+ This steps builds and start the container.
  
 ### Testing
 $ curl -X POST -d '{ "url": "http://localhost:8000/event"}' http://localhost:8000/subscribe/topic1
